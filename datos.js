@@ -106,13 +106,13 @@ const KM = {
       bajada: "Con doble pillow", foto: "assets/catalogo/colchon-isolda-doble-pillow.jpg" },
   ],
 
-  // Opiniones de Google (ficha de King Muebles, 12/10; el total, 01/11): nombre con inicial del apellido, sin fotos.
-  // Se muestran en el inicio y en cada ficha.
+  // Opiniones de Google (ficha de King Muebles; nota, total y lista al 12/11): nombre con inicial del apellido, sin
+  // fotos. Se muestran en el inicio y en cada ficha. Las que hablan de la KNG, primero.
   opiniones: {
-    nota: "4,7", total: 77, link: "https://share.google/Lflyi2ZKii5RVjfKh",
+    nota: "4,7", total: 84, link: "https://share.google/Lflyi2ZKii5RVjfKh",
     lista: [
-      { autor: "Camila R.", texto: "Excelente experiencia de principio a fin. Compramos una cama y todo fue impecable. Cumplieron con los tiempos, hicieron todo muy rápido y el resultado superó nuestras expectativas." },
-      { autor: "Silvana Z.", texto: "Son excelentes! La cama box quedó hermosa! El color y las terminaciones impecables. Son muy amables y responden a todas las preguntas… Muy recomendable!" },
+      { autor: "Sofía A.", texto: "Compré una cama KNG y la verdad todo 10/10, comodísimo para el uso diario, pude optimizar un montón el espacio, los chicos que vinieron a instalar unos genios… El precio también increíble para lo que ofrecen, recomiendo muchísimo." },
+      { autor: "Maxi", texto: "Una muy buena atención, la cama espectacular, los cajones impecables… Además les hicieron las modificaciones del zapatero con otros cajones corredizos para aprovechar mejor el espacio." },
       { autor: "Guadalupe R.", texto: "Excelente cama y servicio! Ramiro con toda la paciencia del mundo resolvió mis dudas y cumplieron con la entrega." },
     ],
   },
