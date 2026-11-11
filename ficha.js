@@ -24,7 +24,7 @@ const abrirEnWhatsApp = (a, msg) => {
 };
 
 main.innerHTML = `
-  <div class="migas"><a href="index.html#catalogo">Catálogo</a> / <a href="index.html?cat=${encodeURIComponent(P.categoria)}#catalogo">${P.categoria}</a> / ${P.nombre}</div>
+  <div class="migas"><a href="index.html#catalogo">Catálogo</a> / <a href="index.html#${{ Camas: "camas", Combos: "combos" }[P.categoria] || "catalogo"}">${P.categoria}</a> / ${P.nombre}</div>
   <div class="ficha">
     <div class="galeria">
       <div class="principal" id="principal"></div>

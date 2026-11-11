@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css?v=19">
+  <link rel="stylesheet" href="estilos.css?v=20">
   <script src="datos.js?v=26"></script>
 </head>
 <body>
@@ -32,6 +32,7 @@
       <a class="logo" href="index.html"><img src="assets/logo-negro.png" alt="King Muebles"></a>
       <nav class="menu-escritorio">
         <a href="#catalogo">Catálogo</a>
+        <a href="#a-medida">A medida</a>
         <a href="#colores">Colores</a>
         <a href="#envios">Envíos</a>
         <a href="#fabrica">Fábrica</a>
@@ -42,6 +43,7 @@
           <summary>Menú</summary>
           <nav>
             <a href="#catalogo">Catálogo</a>
+            <a href="#a-medida">A medida</a>
             <a href="#colores">Colores</a>
             <a href="#envios">Envíos</a>
             <a href="#fabrica">Fábrica</a>
@@ -69,21 +71,53 @@
     <div class="contenedor">
       <div class="seccion-cabeza">
         <h2>Catálogo</h2>
-        <div class="pestanas" role="tablist">
-          <button class="pestana activa" data-cat="todos">Todos</button>
-          <button class="pestana" data-cat="Camas">Camas</button>
-          <button class="pestana" data-cat="Combos">Combos</button>
-          <button class="pestana" data-cat="Colchones">Colchones</button>
-          <button class="pestana" data-cat="A medida">A medida</button>
-        </div>
       </div>
-      <div class="grilla" id="grilla">
-        <!-- los productos del catálogo se cargan desde datos.js, antes de estas tarjetas.
-             Fotos de trabajos que mandó Ramiro (23/10), recortadas sin el logo del post de Instagram -->
-        <a class="producto" data-cat="A medida" data-wa="Hola! Quiero consultar por una cocina a medida."><div class="foto"><img src="assets/medida/medida-cocina.jpg" alt="Cocina a medida en L con bajo mesadas y alacenas" loading="lazy"></div><span class="categoria">A medida</span><h3>Cocinas</h3><span class="detalle">Bajo mesadas y alacenas</span><span class="precio"><small>Consultar por WhatsApp</small></span></a>
-        <a class="producto" data-cat="A medida" data-wa="Hola! Quiero consultar por un vestidor a medida."><div class="foto"><img src="assets/medida/medida-vestidor.jpg" alt="Vestidor a medida con estantes, cajones y barrales" loading="lazy"></div><span class="categoria">A medida</span><h3>Vestidores</h3><span class="detalle">Estantes, cajones y barrales</span><span class="precio"><small>Consultar por WhatsApp</small></span></a>
-        <a class="producto" data-cat="A medida" data-wa="Hola! Quiero consultar por un placard a medida."><div class="foto"><img src="assets/medida/medida-placard.jpg" alt="Placard a medida con puertas corredizas" loading="lazy"></div><span class="categoria">A medida</span><h3>Placards</h3><span class="detalle">Con puertas corredizas</span><span class="precio"><small>Consultar por WhatsApp</small></span></a>
-        <a class="producto" data-cat="A medida" data-wa="Hola! Quiero consultar por un rack o mueble de TV a medida."><div class="foto"><img src="assets/medida/medida-rack.jpg" alt="Rack de TV a medida con placard y estante" loading="lazy"></div><span class="categoria">A medida</span><h3>Racks y living</h3><span class="detalle">Para la TV, con placard y estantes</span><span class="precio"><small>Consultar por WhatsApp</small></span></a>
+      <!-- 11/11: categorías con foto grande (Agustín: "sacar la sección de todos y poner algo nuestro"); cada una
+           lleva a su bloque. Camas de un lado, muebles a medida del otro. -->
+      <nav class="categorias" aria-label="Categorías">
+        <a class="categoria-tile" href="#camas"><img src="assets/reales/kng-blanco-2.jpg" alt="" loading="lazy"><span>Camas con cajones</span></a>
+        <a class="categoria-tile" href="cama-kng-individual.html"><img src="assets/reales/individual-3.jpg" alt="" loading="lazy"><span>Camas de 1 plaza</span></a>
+        <a class="categoria-tile" href="#combos"><img src="assets/reales/combo-kng-2.jpg" alt="" loading="lazy"><span>Combos</span></a>
+        <a class="categoria-tile" href="#a-medida"><img src="assets/medida/medida-vestidor.jpg" alt="" loading="lazy"><span>Muebles a medida</span></a>
+      </nav>
+
+      <div class="bloque-cat" id="camas">
+        <div class="seccion-cabeza">
+          <div>
+            <p class="eyebrow">Camas</p>
+            <h2>Camas con cajones</h2>
+          </div>
+          <p class="lead">Con cajones, bauleras y zapateros, en melamina de 18 mm. En cada una elegís la medida y el color.</p>
+        </div>
+        <div class="grilla" id="grilla-camas"></div>
+      </div>
+
+      <div class="bloque-cat" id="combos">
+        <div class="seccion-cabeza">
+          <div>
+            <p class="eyebrow">Combos</p>
+            <h2>Cama con respaldo y mesitas</h2>
+          </div>
+          <p class="lead">La cama KNG con el respaldo y las mesitas flotantes, todo en el mismo color.</p>
+        </div>
+        <div class="grilla" id="grilla-combos"></div>
+      </div>
+
+      <div class="bloque-cat" id="a-medida">
+        <div class="seccion-cabeza">
+          <div>
+            <p class="eyebrow">A medida</p>
+            <h2>Muebles a medida</h2>
+          </div>
+          <p class="lead">Cocinas, vestidores, placards y racks, hechos a la medida de tu casa. Mandanos las medidas por WhatsApp y te pasamos el presupuesto.</p>
+        </div>
+        <div class="grilla" id="grilla-medida">
+          <!-- Fotos de trabajos que mandó Ramiro (23/10), recortadas sin el logo del post de Instagram -->
+          <a class="producto" data-wa="Hola! Quiero consultar por una cocina a medida."><div class="foto"><img src="assets/medida/medida-cocina.jpg" alt="Cocina a medida en L con bajo mesadas y alacenas" loading="lazy"></div><span class="categoria">A medida</span><h3>Cocinas</h3><span class="detalle">Bajo mesadas y alacenas</span><span class="precio"><small>Consultar por WhatsApp</small></span></a>
+          <a class="producto" data-wa="Hola! Quiero consultar por un vestidor a medida."><div class="foto"><img src="assets/medida/medida-vestidor.jpg" alt="Vestidor a medida con estantes, cajones y barrales" loading="lazy"></div><span class="categoria">A medida</span><h3>Vestidores</h3><span class="detalle">Estantes, cajones y barrales</span><span class="precio"><small>Consultar por WhatsApp</small></span></a>
+          <a class="producto" data-wa="Hola! Quiero consultar por un placard a medida."><div class="foto"><img src="assets/medida/medida-placard.jpg" alt="Placard a medida con puertas corredizas" loading="lazy"></div><span class="categoria">A medida</span><h3>Placards</h3><span class="detalle">Con puertas corredizas</span><span class="precio"><small>Consultar por WhatsApp</small></span></a>
+          <a class="producto" data-wa="Hola! Quiero consultar por un rack o mueble de TV a medida."><div class="foto"><img src="assets/medida/medida-rack.jpg" alt="Rack de TV a medida con placard y estante" loading="lazy"></div><span class="categoria">A medida</span><h3>Racks y living</h3><span class="detalle">Para la TV, con placard y estantes</span><span class="precio"><small>Consultar por WhatsApp</small></span></a>
+        </div>
       </div>
     </div>
   </section>
@@ -254,12 +288,11 @@
   </a>
 
   <script>
-    // productos reales, al principio de la grilla (los marcados "oculto" no se muestran)
-    const grilla = document.getElementById("grilla");
-    KM.productos.filter((p) => !p.oculto).reverse().forEach((p) => {
+    // productos reales, cada uno en el bloque de su categoría (los marcados "oculto" no se muestran)
+    const GRILLAS = { "Camas": "grilla-camas", "Combos": "grilla-combos" };
+    KM.productos.filter((p) => !p.oculto && GRILLAS[p.categoria]).forEach((p) => {
       const a = document.createElement("a");
       a.className = "producto";
-      a.dataset.cat = p.categoria;
       if (p.url) {
         a.href = p.url;
       } else {
@@ -274,22 +307,15 @@
         <h3>${p.nombre}</h3>
         <span class="detalle">${p.bajada}</span>
         <span class="precio">${p.desde ? `<small>Desde </small>${pesos(p.desde)}` : "<small>Consultar precio</small>"}</span>`;
-      grilla.prepend(a);
+      document.getElementById(GRILLAS[p.categoria]).appendChild(a);
     });
 
-    // filtro por categoría (las migas de las fichas llegan con ?cat=Camas, etc.); sin productos, sin pestaña
-    document.querySelectorAll(".pestana").forEach((b) => {
-      b.hidden = b.dataset.cat !== "todos" && !grilla.querySelector(`.producto[data-cat="${b.dataset.cat}"]`);
-      b.addEventListener("click", () => {
-        document.querySelectorAll(".pestana").forEach((x) => x.classList.toggle("activa", x === b));
-        document.querySelectorAll("#grilla .producto").forEach((p) => {
-          p.hidden = b.dataset.cat !== "todos" && p.dataset.cat !== b.dataset.cat;
-        });
-      });
-    });
-    const catPedida = new URLSearchParams(location.search).get("cat");
-    const pestanaPedida = [...document.querySelectorAll(".pestana")].find((b) => b.dataset.cat === catPedida);
-    if (pestanaPedida) pestanaPedida.click();
+    // links viejos con ?cat=Camas: van al bloque de esa categoría
+    const BLOQUE = { "Camas": "camas", "Combos": "combos", "A medida": "a-medida" };
+    const catPedida = BLOQUE[new URLSearchParams(location.search).get("cat")];
+    if (catPedida && !/^#(camas|combos|a-medida)$/.test(location.hash)) {
+      addEventListener("load", () => document.getElementById(catPedida).scrollIntoView());
+    }
 
     // Compará las camas
     (() => {
