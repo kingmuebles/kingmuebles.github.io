@@ -95,7 +95,7 @@ const KM = {
         { foto: "assets/reales/combo-kng-1.jpg", alt: "Combo KNG Scotch: cama con respaldo y mesitas flotantes" },
         { foto: "assets/reales/combo-kng-2.jpg", alt: "Combo KNG Scotch instalado en un dormitorio" },
         { foto: "assets/reales/combo-kng-3.jpg", alt: "Combo KNG Scotch con cajones, bauleras y zapateros abiertos" },
-        { video: "assets/reales/combo-video-abierta.mp4", poster: "assets/reales/combo-video-abierta-poster.jpg" },
+        // 11/11: sin videos en toda la web (Agustín: "sacá los videos de toda la web")
       ],
       precios: PRECIOS_COMBO, partes: PARTES_COMBO,
       specs: "combo-kng" },
