@@ -39,8 +39,7 @@ const KM = {
         { foto: "assets/reales/kng-blanco-2.jpg", alt: "Cama KNG blanca con cajones, bauleras y zapateros abiertos" },
         { foto: "assets/reales/kng-blanco-1.jpg", alt: "Cama KNG blanca abierta, vista desde el costado" },
         { foto: "assets/reales/kng-blanco-3.jpg", alt: "Cama KNG blanca cerrada" },
-        { video: "assets/reales/video-cajones.mp4", poster: "assets/reales/video-cajones-poster.jpg" },
-        { video: "assets/reales/video-bauleras.mp4", poster: "assets/reales/video-bauleras-poster.jpg" },
+        // 11/11: sin videos (Agustín: "sacá todos los videos"; el de los cajones era de otra cama)
       ],
       precios: PRECIOS_KNG,
       specs: "kng" },
