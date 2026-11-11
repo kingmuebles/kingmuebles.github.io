@@ -106,7 +106,7 @@ const KM = {
       bajada: "Con doble pillow", foto: "assets/catalogo/colchon-isolda-doble-pillow.jpg" },
   ],
 
-  // Opiniones de Google (ficha de King Muebles; nota, total y lista al 12/11): nombre con inicial del apellido, sin
+  // Opiniones de Google (ficha de King Muebles; nota, total y lista al 11/11): nombre con inicial del apellido, sin
   // fotos. Se muestran en el inicio y en cada ficha. Las que hablan de la KNG, primero.
   opiniones: {
     nota: "4,7", total: 84, link: "https://share.google/Lflyi2ZKii5RVjfKh",
