@@ -148,6 +148,10 @@ h2 { font-size: clamp(28px, 4.2vw, 40px); }
 }
 .bloque-cat { margin-top: 64px; padding-top: 56px; border-top: 1px solid var(--linea); }
 @media (min-width: 900px) { .bloque-cat { margin-top: 88px; padding-top: 72px; } }
+/* muebles a medida: fotos grandes y enteras (11/11: "no me importa que ocupe mucho espacio, pero que se vea bien") */
+#grilla-medida { grid-template-columns: 1fr; gap: 40px; }
+#grilla-medida .producto h3 { font-size: 22px; }
+@media (min-width: 700px) { #grilla-medida { grid-template-columns: 1fr 1fr; gap: 56px 28px; } }
 
 .grilla { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 16px; }
 @media (min-width: 900px) { .grilla { grid-template-columns: repeat(4, 1fr); gap: 48px 28px; } }
