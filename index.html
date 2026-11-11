@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css?v=19">
-  <script src="datos.js?v=25"></script>
+  <script src="datos.js?v=26"></script>
 </head>
 <body>
 
@@ -299,7 +299,8 @@
       document.getElementById("tabla-comparar").innerHTML =
         `<thead><tr><td></td>${c.titulos.map((t) => `<th scope="col">${t}</th>`).join("")}</tr></thead><tbody>` +
         c.filas.map(([t, celdas]) => fila(t, celdas)).join("") +
-        fila("Desde", prods.map((p) => `<strong>${pesos(p.desde)}</strong>`), "comparar-precio") +
+        // el más barato del modelo (en blanco), aunque la ficha comparada sea de color (ej. el Combo Scotch)
+        fila("Desde", prods.map((p) => `<strong>${pesos(Math.min(...Object.values(p.precios).flat().map(([, v]) => v).filter(Boolean)))}</strong>`), "comparar-precio") +
         fila("", prods.map((p) => `<a class="link-flecha" href="${p.url}">Ver →</a>`), "comparar-ver") +
         "</tbody>";
     })();

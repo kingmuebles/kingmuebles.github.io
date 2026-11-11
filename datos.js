@@ -20,6 +20,16 @@ const PRECIOS_KNG = {
   color: [["1,40 x 1,90", 530000], ["1,60 x 2,00", 550000], ["1,80 x 2,00", 600000], ["2,00 x 2,00", 640000]],
 };
 
+// Combo KNG (cama + respaldo con mesitas): Ramiro pasó solo la 1,40 x 1,90; las otras medidas, a consultar.
+const PRECIOS_COMBO = {
+  blanco: [["1,40 x 1,90", 725000], ["1,60 x 2,00", null], ["1,80 x 2,00", null], ["2,00 x 2,00", null]],
+  color: [["1,40 x 1,90", 755000], ["1,60 x 2,00", null], ["1,80 x 2,00", null], ["2,00 x 2,00", null]],
+};
+const PARTES_COMBO = {   // desglose, para la primera medida
+  blanco: [["Cama", 500000], ["respaldo y mesitas", 225000]],
+  color: [["Cama", 530000], ["respaldo y mesitas", 225000]],
+};
+
 const KM = {
   whatsapp: "5491139573474",          // +54 9 11 3957-3474
   instagram: "kingmuebless",
@@ -75,25 +85,28 @@ const KM = {
       },
       specs: "kng-individual" },
     // Ramiro (14–15/10): respaldo con mesitas flotantes $225.000 + la cama: $530.000 en color ($755.000)
-    // o $500.000 en blanco ($725.000). Se muestra en Scotch, como en las fotos.
-    { id: "combo-kng", nombre: "Combo KNG", color: "Scotch", categoria: "Combos",
-      bajada: "Cama KNG + respaldo con mesitas flotantes", url: "combo-kng.html", desde: 725000,
+    // o $500.000 en blanco ($725.000).
+    // 11/11 (Agustín: "que cada cama tenga su respectiva publicación, lo mismo con los combo KNG"): un combo por
+    // color con fotos, como las camas KNG Blanca y Scotch; las muestras de color se linkean entre sí.
+    { id: "combo-kng", modelo: "combo", base: "Combo KNG", nombre: "Combo KNG Scotch", color: "Scotch", categoria: "Combos",
+      bajada: "Cama KNG + respaldo con mesitas flotantes", url: "combo-kng.html", desde: 755000,
       foto: "assets/reales/combo-kng-1.jpg",
       galeria: [
-        { foto: "assets/reales/combo-kng-1.jpg", alt: "Combo KNG: cama con respaldo y mesitas flotantes" },
-        { foto: "assets/reales/combo-kng-2.jpg", alt: "Combo KNG instalado en un dormitorio" },
-        { foto: "assets/reales/combo-kng-3.jpg", alt: "Combo KNG con cajones, bauleras y zapateros abiertos" },
+        { foto: "assets/reales/combo-kng-1.jpg", alt: "Combo KNG Scotch: cama con respaldo y mesitas flotantes" },
+        { foto: "assets/reales/combo-kng-2.jpg", alt: "Combo KNG Scotch instalado en un dormitorio" },
+        { foto: "assets/reales/combo-kng-3.jpg", alt: "Combo KNG Scotch con cajones, bauleras y zapateros abiertos" },
         { video: "assets/reales/combo-video-abierta.mp4", poster: "assets/reales/combo-video-abierta-poster.jpg" },
-        { foto: "assets/reales/combo-kng-claro-1.jpg", alt: "Combo KNG en Helsinki, con la cama abierta", color: "Helsinki" },
       ],
-      precios: {
-        blanco: [["1,40 x 1,90", 725000], ["1,60 x 2,00", null], ["1,80 x 2,00", null], ["2,00 x 2,00", null]],
-        color: [["1,40 x 1,90", 755000], ["1,60 x 2,00", null], ["1,80 x 2,00", null], ["2,00 x 2,00", null]],
-      },
-      partes: {   // desglose, para la primera medida
-        blanco: [["Cama", 500000], ["respaldo y mesitas", 225000]],
-        color: [["Cama", 530000], ["respaldo y mesitas", 225000]],
-      },
+      precios: PRECIOS_COMBO, partes: PARTES_COMBO,
+      specs: "combo-kng" },
+    { id: "combo-kng-helsinki", modelo: "combo", base: "Combo KNG", nombre: "Combo KNG Helsinki", color: "Helsinki", categoria: "Combos",
+      bajada: "Cama KNG + respaldo con mesitas flotantes", url: "combo-kng-helsinki.html", desde: 755000,
+      foto: "assets/reales/combo-kng-claro-2.jpg",
+      galeria: [
+        { foto: "assets/reales/combo-kng-claro-2.jpg", alt: "Combo KNG Helsinki: cama con respaldo y mesitas flotantes" },
+        { foto: "assets/reales/combo-kng-claro-1.jpg", alt: "Combo KNG Helsinki con cajones, bauleras y zapateros abiertos" },
+      ],
+      precios: PRECIOS_COMBO, partes: PARTES_COMBO,
       specs: "combo-kng" },
     // Colchones: ocultos (Candela, 15/10: los revenden y quizás no se puedan mostrar en una web propia).
     // Para volver a mostrarlos, borrar "oculto: true" (y sumar "colchones" en la frase de la portada).
